@@ -9,7 +9,7 @@ case class QueryResult(
   Count            : Option[Long],
   Items            : Option[Array[String]],
   LastEvaluatedKey : Option[JsObject]
-)
+) extends DynamoDBResult
 
 object QueryResult extends Function4[Option[ConsumedCapacity],Option[Long],Option[Array[String]],Option[JsObject],QueryResult] {
   
